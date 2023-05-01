@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAPI", "SuperHeroAPI.csproj", "{C941E670-7D45-4120-AA15-554122832154}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHero-API-Test", "..\SuperHero-API-Test\SuperHero-API-Test.csproj", "{EE24BC3D-1EFC-4F75-80B5-431E01CAEDBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C941E670-7D45-4120-AA15-554122832154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C941E670-7D45-4120-AA15-554122832154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C941E670-7D45-4120-AA15-554122832154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE24BC3D-1EFC-4F75-80B5-431E01CAEDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE24BC3D-1EFC-4F75-80B5-431E01CAEDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE24BC3D-1EFC-4F75-80B5-431E01CAEDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE24BC3D-1EFC-4F75-80B5-431E01CAEDBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

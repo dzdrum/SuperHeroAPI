@@ -60,3 +60,27 @@
 
 
     4. now the model files representing the tables have been created and the DBContext reflecting the database
+
+
+##Setting up Unit Testing
+    I have been following this guide: https://code-maze.com/unit-testing-aspnetcore-web-api/
+
+    Dependency injection is hugely important for unit testing.
+    Dependency injection allows you to mock up data and run tests without duplicating code
+
+    1. Create an interface which defines the contract for your data access service - in this case it is the SuperHeroService
+
+    2. Create an xUnit project
+
+    3. Within your xUnit project create:
+
+        **note pre-requisite -> your implemented controller should implement the interface you created in step 1
+
+        3a. A test controller which implements the interface you created in 1.
+
+        3b. Ensure that the test controller expects a service and real controller depdency injection in the constructor
+
+        3c. Create a fake SuperHero Service, here you will mock up the data fields to abstract away the actual database
+
+        3d. Add your tests into the test controller
+
