@@ -70,6 +70,22 @@ namespace SuperHero_API_Test
             var itemToRemove = _superHeroes.First(a => a.Id == id);
             _superHeroes.Remove(itemToRemove);
         }
+
+        public SuperHero Edit(SuperHero newSuperHero)
+        {
+            var itemToUpdate = _superHeroes.FirstOrDefault(a => a.Id == newSuperHero.Id);
+            if(itemToUpdate is null)
+            {
+                return null;
+            }
+
+            itemToUpdate.Name = newSuperHero.Name;
+            itemToUpdate.FirstName = newSuperHero.FirstName;
+            itemToUpdate.LastName = newSuperHero.LastName;
+            itemToUpdate.Place = newSuperHero.Place;
+            return itemToUpdate;
+
+        }
     }
 }
 

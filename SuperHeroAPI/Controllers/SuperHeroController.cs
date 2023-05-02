@@ -25,14 +25,14 @@ namespace SuperHeroAPI.Controllers
         //GetAllSuperHeroes
 
         [HttpGet]
-        public ActionResult GetSuperHeroes()
+        public IActionResult GetSuperHeroes()
         {
             var superHeroes = _superHeroService.GetAllSuperHeroes();
             return Ok(superHeroes);
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetSuperHeroes(int id)
+        public IActionResult GetSuperHeroes(int id)
         {
             var item = _superHeroService.GetById(id);
             if(item is null)
@@ -43,15 +43,22 @@ namespace SuperHeroAPI.Controllers
             return Ok(item);
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<List<SuperHero>>> GetSuperHeroes()
-        //{
-        //    using (var context = new SuperHeroDbContext())
-        //    {
-        //        return context.SuperHeroes.ToList();
-        //    }
+        [HttpPut]
+        public IActionResult UpdateSuperHero([FromBody] SuperHero newSuperHero)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-        //}
+
+            var item = _superHeroService.Edit(newSuperHero);
+            if(item is null)
+            {
+                return new NotFoundResult();
+            }
+            return Ok(_superHeroService.GetAllSuperHeroes());
+        }
     }
 }
 

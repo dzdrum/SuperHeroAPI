@@ -34,5 +34,22 @@ namespace SuperHeroAPI.Services.Implementations
         {
             throw new NotImplementedException();
         }
+
+        public SuperHero Edit(SuperHero newSuperHero)
+        {
+            var context = new SuperHeroDbContext();
+            var itemToUpdate = context.SuperHeroes.FirstOrDefault(a => a.Id == newSuperHero.Id);
+            if (itemToUpdate is null)
+            {
+                return null;
+            }
+
+            itemToUpdate.Name = newSuperHero.Name;
+            itemToUpdate.FirstName = newSuperHero.FirstName;
+            itemToUpdate.LastName = newSuperHero.LastName;
+            itemToUpdate.Place = newSuperHero.Place;
+            context.SaveChanges();
+            return itemToUpdate;
+        }
     }
 }
