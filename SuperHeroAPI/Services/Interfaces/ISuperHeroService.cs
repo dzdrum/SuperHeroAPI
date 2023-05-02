@@ -8,5 +8,6 @@ namespace SuperHeroAPI.Services.Interfaces
         SuperHero Add(SuperHero newItem);
         SuperHero GetById(int id);
         void Remove(int id);
+        SuperHero Edit(SuperHero newItem);
     }
 }
