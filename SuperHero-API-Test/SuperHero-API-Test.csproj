@@ -24,6 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SuperHeroAPIApr28\SuperHeroAPI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperHeroAPI\SuperHeroAPI.csproj" />
   </ItemGroup>
 </Project>
